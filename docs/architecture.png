@@ -1,0 +1,7 @@
+Raw Events (BigQuery)
+        ↓
+stg_events
+        ↓
+mart_first_touch / mart_last_touch
+        ↓
+Looker Studio Dashboard
