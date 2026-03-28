@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: "Staging table for raw marketing events"
+    columns:
+      - name: event_id
+        description: "Unique identifier for each event"
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: "Unique identifier for user"
+        tests:
+          - not_null
+
+      - name: event_time
+        description: "Timestamp of event"
+        tests:
+          - not_null
+
+      - name: channel
+        description: "Marketing channel source"
+        tests:
+          - not_null
+
+  - name: mart_first_touch_attribution
+    description: "First touch attribution model"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+  - name: mart_last_touch_attribution
+    description: "Last touch attribution model"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
