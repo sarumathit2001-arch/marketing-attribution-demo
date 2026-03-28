@@ -21,8 +21,8 @@ Raw Events → Staging → Attribution Models → Dashboard
 - Raw Table: `raw_events`
 - Models:
   - `stg_events`
-  - `first_touch_attribution`
-  - `last_touch_attribution`
+  - `mart_first_touch_attribution`
+  - `mart_last_touch_attribution`
 
 ---
 
