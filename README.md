@@ -44,10 +44,12 @@ Raw Events → Staging → Attribution Models → Dashboard
 ### First Touch Attribution
 - First interaction per user
 - Uses window function with `ORDER BY event_time ASC`
+- Window functions (ROW_NUMBER) were used to identify first and last touch events per user.
 
 ### Last Touch Attribution
 - Most recent interaction per user
 - Uses window function with `ORDER BY event_time DESC`
+- Window functions (ROW_NUMBER) were used to identify first and last touch events per user.
 
 ---
 
@@ -57,6 +59,9 @@ Raw Events → Staging → Attribution Models → Dashboard
 - Identity resolution: Based on `user_id`
 - Tie-breaker: Earliest/latest timestamp
 - No duplicate event_ids
+- ## ✅ Data Quality Tests
+
+Basic dbt tests such as not_null and uniqueness were defined in schema.yml.
 
 ---
 
@@ -64,6 +69,7 @@ Raw Events → Staging → Attribution Models → Dashboard
 
 - Simulated event streaming using insert queries
 - Demonstrates near real-time updates in dashboard
+- Due to BigQuery free tier limitations, streaming API was simulated using delayed inserts. In production, this would be implemented using Pub/Sub or streaming inserts.
 
 ### Key Concepts
 - Idempotency: event_id ensures uniqueness
