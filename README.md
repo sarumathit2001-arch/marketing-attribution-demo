@@ -130,6 +130,8 @@ https://lookerstudio.google.com/reporting/5303f919-e083-4138-8514-88a97031010d/p
 
 Ready for live demo or screencast (5–8 minutes)
 
+Demo Link - https://www.loom.com/share/0f47c3c6bc82480190c050134932e66e
+
 ---
 
 ## 📝 Worklog
