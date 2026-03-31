@@ -70,6 +70,8 @@ Basic dbt tests such as not_null and uniqueness were defined in schema.yml.
 - Simulated event streaming using insert queries
 - Demonstrates near real-time updates in dashboard
 - Due to BigQuery free tier limitations, streaming API was simulated using delayed inserts. In production, this would be implemented using Pub/Sub or streaming inserts.
+- In production, streaming would be implemented using Pub/Sub and BigQuery streaming inserts for low-latency ingestion.
+- Expected latency is near real-time (seconds to minutes depending on ingestion method).
 
 ### Key Concepts
 - Idempotency: event_id ensures uniqueness
@@ -133,3 +135,11 @@ Ready for live demo or screencast (5–8 minutes)
 ## 📝 Worklog
 
 See `worklog.md` for daily progress tracking
+
+---
+
+## 🚀 Future Improvements
+
+- Implement incremental dbt models
+- Add identity resolution across devices
+- Use Pub/Sub for real-time streaming
